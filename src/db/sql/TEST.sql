@@ -5,20 +5,20 @@ USE TEST3;
 
 CREATE TABLE users
 ( 
-id			 INT 			NOT NULL 	PRIMARY KEY,
-login		 VARCHAR(100) 	NOT NULL,
-passwords	 VARCHAR(100) 	NOT NULL
+id 				INT 			NOT NULL 	PRIMARY KEY,
+login 			VARCHAR(100) 	NOT NULL,
+passwords 		VARCHAR(100)	NOT NULL
 );
 
 CREATE TABLE roles
 (
-id		 INT			 NOT NULL		PRIMARY KEY,
-name	 VARCHAR(100)	 NOT NULL
+id 			INT 			NOT NULL		PRIMARY KEY,
+name 		VARCHAR(100) 	NOT NULL
 );
 
 CREATE TABLE pizzas
 (
-id			INT 			NOT NULL	PRIMARY KEY,
+id 			INT 			NOT NULL	PRIMARY KEY,
 title 		VARCHAR(100) 	NOT NULL,
 price 		NUMERIC 		NOT NULL
 );
@@ -32,68 +32,68 @@ price 		NUMERIC 		NOT NULL
 
 CREATE TABLE promo_codes
 (
-id 			INT			 NOT NULL		PRIMARY KEY,
-code 		SMALLINT	 NULL,
-value 		NUMERIC		 NULL,
-due_date	DATETIME	 NOT NULL
+id 			INT 			NOT NULL		PRIMARY KEY,
+code 		SMALLINT 		NULL,
+value 		NUMERIC 		NULL,
+due_date 	DATETIME 		NOT NULL
 );
 
 CREATE TABLE user_info
 (
-id			 INT			 NOT NULL	PRIMARY KEY,
-user_id		 INT			 NOT NULL,
-name		 VARCHAR(100)	 NOT NULL,
-namber		 VARCHAR(20)	 NULL,
-email		 VARCHAR(100)	 NOT NULL
+id 				INT 			NOT NULL	PRIMARY KEY,
+user_id 		INT 			NOT NULL,
+name 			VARCHAR(100) 	NOT NULL,
+namber 			VARCHAR(20) 	NULL,
+email 			VARCHAR(100) 	NOT NULL
 );
 
 CREATE TABLE users_roles
 (
-id			 INT	 NOT NULL		PRIMARY KEY,
-user_id		 INT	 NOT NULL,
-role_id		 INT	 NOT NULL
+id 				INT 		NOT NULL		PRIMARY KEY,
+user_id 		INT 		NOT NULL,
+role_id 		INT 		NOT NULL
 );
 
 
 CREATE TABLE ordor
 (
-id				 INT			 NOT NULL	PRIMARY KEY,
-user_id			 INT			 NOT NULL,
-promo_code_id	 INT			 NULL,
-waiting_time	 TIME			 NOT NULL,
-to_be_paid		 NUMERIC		 NOT NULL,
-buyers_address	 VARCHAR(100)	 NOT NULL,
-paymen			 VARCHAR(100)	 NOT NULL,
-delivery		 VARCHAR(100)	 NOT NULL,
-comments		 TEXT(300)		 NULL,
-statys			 VARCHAR(100)	 NOT NULL
+id 					INT 				NOT NULL	PRIMARY KEY,
+user_id 			INT 				NOT NULL,
+promo_code_id 		INT 				NULL,
+waiting_time 		TIME 				NOT NULL,
+to_be_paid 			NUMERIC 			NOT NULL,
+buyers_address 		VARCHAR(100) 		NOT NULL,
+paymen 				VARCHAR(100) 		NOT NULL,
+delivery 			VARCHAR(100) 		NOT NULL,
+comments 			TEXT(300) 			NULL,
+statys 				VARCHAR(100) 		NOT NULL
 );
 
 CREATE TABLE basket
 (
-id			 INT		 NOT NULL	PRIMARY KEY,
-ordor_id	 INT		 NOT NULL,
-pizza_id	 INT		 NOT NULL,
-quantity	 SMALLINT	 NULL,
-price		 NUMERIC	 NULL
+id 				INT 		NOT NULL	PRIMARY KEY,
+ordor_id 		INT 		NOT NULL,
+pizza_id 		INT 		NOT NULL,
+quantity 		SMALLINT 	NULL,
+price 			NUMERIC 	NULL
 );
 
 CREATE TABLE pizza_ingredient
 (
-id				 INT		 NOT NULL	PRIMARY KEY,
-ingredient_id	 INT		 NOT NULL,
-pizza_id		 INT		 NOT NULL,
-quantity		 SMALLINT	 NOT NULL
+id 					INT 			NOT NULL	PRIMARY KEY,
+ingredient_id 		INT 			NOT NULL,
+pizza_id 			INT 			NOT NULL,
+quantity 			SMALLINT 		NOT NULL
 );
 
 CREATE TABLE reviews
 (
-id			 INT			 NOT NULL	PRIMARY KEY,
-pizza_id	 INT			 NOT NULL,
-user_id		 INT			 NOT NULL,
-date		 DATETIME		 NOT NULL,
-comment		 TEXT(300)		 NULL,
-rate		 SMALLINT		 NULL
+id 				INT 			NOT NULL	PRIMARY KEY,
+pizza_id 		INT 			NOT NULL,
+user_id 		INT 			NOT NULL,
+date 			DATETIME 		NOT NULL,
+comment 		TEXT(300) 		NULL,
+rate 			SMALLINT 		NULL
 );
 
 ALTER TABLE user_info
